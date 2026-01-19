@@ -1,0 +1,22 @@
+artifact:
+  id: io.beamcampus.demo.phoenix
+  name: Demo Phoenix
+  type: service
+  version: 0.1.1
+  description: Phoenix LiveView demo application for bc-gitops
+
+package:
+  source:
+    type: mix
+    release: demo_phoenix
+
+# Health check endpoint
+health:
+  type: http
+  port: 4000
+  path: /
+
+# Runtime configuration
+env:
+  PHX_HOST: localhost
+  PORT: 4000
